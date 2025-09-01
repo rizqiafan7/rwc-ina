@@ -1,0 +1,78 @@
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: end;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 140px;
+}
+
+/* Add new rule for Six-hour period control */
+.control:has(.time-periods) {
+    margin-left: auto;
+}
+
+.label { font-weight: 600; color: #374151; font-size: 0.875rem; display: flex; align-items: center; gap: 0.25rem; }
+.select, .date-input { padding: 0.75rem; border: 2px solid #d1d5db; border-radius: 0.5rem; background: white; font-size: 0.875rem; color: #374151; transition: all 0.2s; font-weight: 500; }
+.select:focus, .date-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,102,204,0.1); }
+
+.time-periods {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.time-btn {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    border: 2px solid #d1d5db !important;
+    border-radius: 50% !important;
+    background: white !important;
+    color: #6b7280 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 3.5rem !important;
+    min-height: 3.5rem !important;
+    box-sizing: border-box !important;
+}
+
+.time-btn:hover {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+}
+
+.time-btn.active {
+    background: var(--success) !important;
+    border-color: var(--success) !important;
+    color: white !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 2px 6px rgba(16,185,129,0.3) !important;
+}
+
+/* Control container styles */
+.control:has(.time-periods) {
+    margin-left: auto !important;
+    min-width: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+} 

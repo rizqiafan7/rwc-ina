@@ -1,0 +1,145 @@
+/* Updated mobile styles for better responsiveness */
+@media (max-width: 768px) {
+    /* Fix controls spacing */
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .control:has(.time-periods) {
+        margin-left: 0;
+    }
+    
+    /* Adjust header spacing to ensure nav menu visibility */
+    .header {
+        padding: 0.75rem 1rem;
+        margin-top: 60px; /* Add space below navigation */
+    }
+    
+    .title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Adjust map container height for mobile */
+    .map-container { 
+        height: 50vh; 
+        min-height: 350px;
+        margin-bottom: 650px; /* Add space for panels below */
+    }
+    
+    /* Reposition panels for mobile */
+    .panel { 
+        position: static; 
+        width: calc(100% - 2rem);
+        margin: 1rem auto;
+        max-width: 100%;
+    }
+    
+    /* Stack panels vertically on mobile */
+    .legend, .status {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+    }
+    
+    /* Adjust grid layout for status */
+    .status-grid { 
+        grid-template-columns: 1fr 1fr; 
+        gap: 0.5rem; 
+    }
+    
+    .stat-item {
+        padding: 0.5rem;
+    }
+    
+    .stat-count {
+        font-size: 1.25rem;
+    }
+    
+    .chart-container { 
+        height: 160px; 
+    }
+    
+    .chart-section { 
+        margin-top: 1rem; 
+    }
+    
+    .chart-title { 
+        font-size: 0.8rem; 
+    }
+    
+    /* Better mobile experience */
+    .time-periods {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .control:has(.time-periods) {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    
+    .time-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 0.875rem;
+    }
+    
+    .select, .date-input { 
+        font-size: 16px; /* Prevent zoom on iOS */ 
+    }
+    
+    /* Improve popup display on mobile */
+    .popup {
+        min-width: 280px;
+        max-width: 320px;
+    }
+    
+    .popup-header h3 {
+        font-size: 1rem;
+    }
+    
+    .info-row {
+        font-size: 0.8rem;
+    }
+    
+    /* Make controls more touch-friendly */
+    .ctrl-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    /* Ensure no horizontal overflow */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
+
+/* Additional styles for very small screens */
+@media (max-width: 480px) {
+    .status-grid {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+    }
+    
+    .map-container {
+        margin-bottom: 750px; /* More space for panels */
+    }
+    
+    .popup {
+        min-width: 220px;
+        max-width: 280px;
+    }
+    
+    .center-table {
+        font-size: 0.75rem;
+    }
+    
+    .center-table th,
+    .center-table td {
+        padding: 0.3rem 0.4rem;
+    }
+} 

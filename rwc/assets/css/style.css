@@ -1,0 +1,131 @@
+/* assets/css/style.css */
+
+/* Custom Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-10px); 
+    }
+}
+
+/* Map Surfaces */
+.map-surface {
+    background: linear-gradient(135deg, #2ecc71, #27ae60, #f39c12, #e67e22);
+}
+
+.map-upper {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.map-marine {
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.map-climate {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.map-nwp {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+/* Map Pattern Effects */
+.map-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 2px, transparent 2px),
+        radial-gradient(circle at 40% 70%, rgba(255,255,255,0.6) 1px, transparent 1px),
+        radial-gradient(circle at 70% 20%, rgba(255,255,255,0.7) 1.5px, transparent 1.5px),
+        radial-gradient(circle at 60% 60%, rgba(255,255,255,0.5) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.6) 1.5px, transparent 1.5px);
+    background-size: 20px 20px, 15px 15px, 18px 18px, 12px 12px, 16px 16px;
+}
+
+.map-pattern::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
+    height: 2px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 1px;
+}
+
+/* Button Styles */
+.contact-button {
+    transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Utility Classes */
+.text-bmkg-blue {
+    color: #4a90e2;
+}
+
+.bg-bmkg-blue {
+    background-color: #4a90e2;
+}
+
+.bg-bmkg-dark {
+    background-color: #2C3E4F;
+}
+
+.text-bmkg-red {
+    color: #e74c3c;
+}
+
+.bg-bmkg-red {
+    background-color: #e74c3c;
+}
+
+.border-bmkg-blue {
+    border-color: #4a90e2;
+}
+
+/* Monitoring Item Hover Effects */
+.monitoring-item {
+    transition: all 0.3s ease;
+}
+
+.monitoring-item:hover {
+    transform: translateY(-8px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .animate-fade-in-up {
+        animation-delay: 0s !important;
+    }
+}

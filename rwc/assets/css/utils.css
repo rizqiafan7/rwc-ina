@@ -1,0 +1,10 @@
+.loading { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255,255,255,0.95); display: none; align-items: center; justify-content: center; z-index: 2000; flex-direction: column; gap: 1.5rem; backdrop-filter: blur(5px); }
+.spinner { width: 3rem; height: 3rem; border: 4px solid #e5e7eb; border-top: 4px solid var(--accent); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.alert { position: fixed; top: 2rem; right: 2rem; z-index: 3000; padding: 1rem 1.5rem; border-radius: 0.5rem; color: white; font-weight: 600; transform: translateX(400px); transition: all 0.3s ease; }
+.alert.show { transform: translateX(0); }
+.alert.success { background: var(--success); }
+.alert.error { background: var(--error); }
+.alert.warning { background: var(--warning); }
+.alert.info { background: var(--accent); } 

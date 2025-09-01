@@ -1,0 +1,9 @@
+/* Monitoring CSS - Split into modular files */
+@import 'base.css';
+@import 'controls.css';
+@import 'map.css';
+@import 'panels.css';
+@import 'status.css';
+@import 'popup.css';
+@import 'utils.css';
+@import 'responsive.css'; 
